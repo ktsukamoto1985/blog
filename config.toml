@@ -1,8 +1,9 @@
-baseURL = "http://example.org/"
+baseURL = "https://ktsukamoto1985.github.io/blog/"
 languageCode = "ja-jp"
 title = "living in retirement"
 theme = "smol"
 publishDir = "docs"
+canonifyurls = true
 
 # Parameters
 [params]
