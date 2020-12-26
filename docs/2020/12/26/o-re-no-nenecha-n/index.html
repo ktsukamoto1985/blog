@@ -9,7 +9,6 @@
 	
 	
 	<link rel="stylesheet" href="https://ktsukamoto1985.github.io/blog/css/style.css">
-	<link rel="stylesheet" href="https://ktsukamoto1985.github.io/blog/css/syntax-highlight.css">
 	
 </head>
 <body>
@@ -83,28 +82,26 @@
 <h2 id="原理">原理</h2>
 <p>なんのことはない、光センサとサーボモータをArduinoに接続し、光の強さによってサーボモータの角度を変更しているだけのこと。</p>
 <p>Arduinoのコードもシンプル。</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">re</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&#34;f&#34;</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-arduino" data-lang="arduino"><span class="cp">#include</span> <span class="cpf">&lt;Servo.h&gt;</span><span class="cp">
-</span><span class="cp"></span>
-<span class="nc">Servo</span> <span class="n">sv</span><span class="p">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-arduino" data-lang="arduino"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Servo.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">Servo</span> sv;
 
-<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nc">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
-  <span class="n">sv</span><span class="p">.</span><span class="nf">attach</span><span class="p">(</span><span class="mi">11</span><span class="p">);</span>
-<span class="p">}</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+  <span style="color:#a6e22e">Serial</span>.<span style="color:#a6e22e">begin</span>(<span style="color:#ae81ff">9600</span>);
+  sv.<span style="color:#a6e22e">attach</span>(<span style="color:#ae81ff">11</span>);
+}
 
-<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// put your main code here, to run repeatedly:
-</span><span class="c1"></span>  <span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="nf">analogRead</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-  <span class="kt">int</span> <span class="n">angle</span> <span class="o">=</span> <span class="nf">min</span><span class="p">((</span><span class="n">val</span><span class="o">-</span><span class="mi">300</span><span class="p">)</span><span class="o">*</span><span class="mi">3</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="mi">90</span><span class="p">);</span>
-  <span class="k">if</span><span class="p">(</span><span class="n">angle</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
-    <span class="n">angle</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="nc">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
-  <span class="n">sv</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">angle</span><span class="p">);</span>
-  <span class="nf">delay</span><span class="p">(</span><span class="mi">333</span><span class="p">);</span>
-<span class="p">}</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+  <span style="color:#75715e">// put your main code here, to run repeatedly:
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> val <span style="color:#f92672">=</span> <span style="color:#a6e22e">analogRead</span>(<span style="color:#ae81ff">3</span>);
+  <span style="color:#66d9ef">int</span> angle <span style="color:#f92672">=</span> <span style="color:#a6e22e">min</span>((val<span style="color:#f92672">-</span><span style="color:#ae81ff">300</span>)<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span><span style="color:#f92672">/</span><span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">90</span>);
+  <span style="color:#66d9ef">if</span>(angle <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>){
+    angle <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  }
+  <span style="color:#a6e22e">Serial</span>.<span style="color:#a6e22e">println</span>(val);
+  sv.<span style="color:#a6e22e">write</span>(angle);
+  <span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">333</span>);
+}
 </code></pre></div><p>サーボモータが0度から90度の間を30度刻みで動くように角度を適当に調整した。<br>
 10kΩの抵抗をつないだときの実測値がだいたい350くらいだったので雑に決めている。</p>
 <p>大事なアクリルキーホルダーには傷をつけたくないので、洗濯ばさみに立て掛けて爪楊枝でぶれないようにつっかえ棒に。<br>
