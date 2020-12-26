@@ -4,11 +4,14 @@ title = "living in retirement"
 theme = "smol"
 publishDir = "docs"
 canonifyurls = true
+pygmentsUseClasses = true
+pygmentsCodefences = true
 
 # Parameters
 [params]
     subtitle = "I wanna be a minimalist."
     dateFmt = "02.01.2006 15:04"
+  	# customCSS = ["/css/syntax-highlight.css"]
 
 # Header
 [menu]
@@ -18,17 +21,17 @@ canonifyurls = true
         url = "/posts/"
         weight = 1
 
-  [[menu.main]]
-        identifier = "categories"
-        name = "Categories"
-        url = "/categories/"
-        weight = 2
-
   # [[menu.main]]
-  #       identifier = "tags"
-  #       name = "Tags"
-  #       url = "/tags/"
-  #       weight = 3
+  #       identifier = "categories"
+  #       name = "Categories"
+  #       url = "/categories/"
+  #       weight = 2
+
+  [[menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags/"
+        weight = 2
 
 # Footer
   # [[menu.footer]]

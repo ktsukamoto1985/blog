@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>サイリウムに反応して推しがこっちを向いてくれる</title>
+	
+	
+	<link rel="stylesheet" href="https://ktsukamoto1985.github.io/blog/css/style.css">
+	<link rel="stylesheet" href="https://ktsukamoto1985.github.io/blog/css/syntax-highlight.css">
+	
+</head>
+<body>
+	<header>
+	==========================<br>
+	== <a href="https://ktsukamoto1985.github.io/blog/">living in retirement</a> ==<br>
+	==========================
+	<div style="float: right;">I wanna be a minimalist.</div><br>
+	<p>
+	<nav>
+			<a href="https://ktsukamoto1985.github.io/blog/"><b>Start</b></a>.
+			
+			
+			<a href="https://ktsukamoto1985.github.io/blog/posts/"><b>Posts</b></a>.
+			
+			<a href="https://ktsukamoto1985.github.io/blog/tags/"><b>Tags</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>サイリウムに反応して推しがこっちを向いてくれる</h1>
+			<b><time>26.12.2020 00:00</time></b>
+		       
+		           <a href="https://ktsukamoto1985.github.io/blog/tags/idol">idol</a>
+        	       
+
+			<div>
+				<h2 id="前置き">前置き</h2>
+<p>この記事は<a href="https://qiita.com/advent-calendar/2020/aiit">AIIT(産業技術大学院大学) Advent Calendar 2020</a>、3日目の記事です。<br>
+やるって主催には連絡しておきながらまったくネタが浮かばずこの体たらく。</p>
+<h2 id="動機">動機</h2>
+<p>昔、地下アイドルを熱心に追いかけていたことがあった。<br>
+普段は後方彼氏面でライブを見ていたけど、やっぱり推しからのレスはうれしいもの。<br>
+なので、推しにレスしてもらえるシステムを作った。</p>
+<h2 id="成果物">成果物</h2>
+<p>サイリウムを振ると、推しのアクキーが振り向いてレスをくれる。<br>
+写真で見ていただくのが手っ取り早いと思うので。</p>
+
+<figure >
+    
+        <img src="https://ktsukamoto1985.github.io/blog/image/20201224-01.jpg"  />
+    
+    
+    <figcaption>
+        <h4>写真1 普段は横を向いている</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+<figure >
+    
+        <img src="https://ktsukamoto1985.github.io/blog/image/20201224-02.jpg"  />
+    
+    
+    <figcaption>
+        <h4>写真2 サイリウムを近づけるとこっちを向いてくれる</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<h2 id="原理">原理</h2>
+<p>なんのことはない、光センサとサーボモータをArduinoに接続し、光の強さによってサーボモータの角度を変更しているだけのこと。</p>
+<p>Arduinoのコードもシンプル。</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">re</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;f&#34;</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-arduino" data-lang="arduino"><span class="cp">#include</span> <span class="cpf">&lt;Servo.h&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="nc">Servo</span> <span class="n">sv</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nc">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+  <span class="n">sv</span><span class="p">.</span><span class="nf">attach</span><span class="p">(</span><span class="mi">11</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your main code here, to run repeatedly:
+</span><span class="c1"></span>  <span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="nf">analogRead</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="n">angle</span> <span class="o">=</span> <span class="nf">min</span><span class="p">((</span><span class="n">val</span><span class="o">-</span><span class="mi">300</span><span class="p">)</span><span class="o">*</span><span class="mi">3</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="mi">90</span><span class="p">);</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">angle</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nc">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
+  <span class="n">sv</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">angle</span><span class="p">);</span>
+  <span class="nf">delay</span><span class="p">(</span><span class="mi">333</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p>サーボモータが0度から90度の間を30度刻みで動くように角度を適当に調整した。<br>
+10kΩの抵抗をつないだときの実測値がだいたい350くらいだったので雑に決めている。</p>
+<p>大事なアクリルキーホルダーには傷をつけたくないので、洗濯ばさみに立て掛けて爪楊枝でぶれないようにつっかえ棒に。<br>
+この程度でも意外に固定されており、満足感はある。</p>
+<h2 id="そんなことより推しの話">そんなことより推しの話</h2>
+<p>アクリルキーホルダーは2020年1月まで活動していた、<a href="http://tiptoe-official.com/">tipToe.</a>第1期メンバーのものを使用している。アクリルキーホルダーなんて食事に添えて使う以外の用途が考えつかなかった(一部の地下アイドル界隈にはそういう文化がある)ので普段は買っていなかったけれど、tipだけは絵柄が可愛いので買ってあったのが功を奏した形。<br>
+現在は第2期が活動中。コロナが落ち着いていたら見に行きたかった。</p>
+
+<figure >
+    
+        <img src="https://ktsukamoto1985.github.io/blog/image/20201226-01.jpg"  />
+    
+    
+</figure>
+
+
+<p>それでは良いお年を。</p>
+<h2 id="tiptoeの動画とか">tipToe.の動画とか</h2>
+<p>MVだとこれ好き
+<div class="embed video-player">
+  <iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/AH7LpPeZDXw" allowfullscreen frameborder="0"></iframe>
+</div>
+</p>
+<p>ライブ動画だとこれ好き
+<div class="embed video-player">
+  <iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/O7jaU5F74Bg" allowfullscreen frameborder="0"></iframe>
+</div>
+</p>
+<p>プロデューサー本間さん作成の第1期全曲プレイリスト。
+<div class="embed video-player">
+  <iframe src="https://open.spotify.com/embed/playlist/37IRLBentQcLDZzZAhy6JS" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+</p>
+
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="https://ktsukamoto1985.github.io/blog/2020/12/26/o-re-no-nenecha-n/">サイリウムに反応して推しがこっちを向いてくれる</a></li>
+				
+				<li><a href="https://ktsukamoto1985.github.io/blog/2020/12/25/first-stage/">場所</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2020 <a href="https://ktsukamoto1985.github.io/blog/"><b>living in retirement</b></a>.
+	</p>
+</footer>
+
+</body>
+</html>
