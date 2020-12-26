@@ -4,6 +4,8 @@ title = "living in retirement"
 theme = "smol"
 publishDir = "docs"
 canonifyurls = true
+pygmentsUseClasses = true
+pygmentsCodefences = true
 
 # Parameters
 [params]
@@ -51,5 +53,5 @@ canonifyurls = true
   posts = "/:year/:month:/:day/:slug/"
 
 [taxonomies]
-  # tag = "tags"
-  category = "categories"
+  tag = "tags"
+  # category = "categories"
