@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on living in retirement</title>
-    <link>https://ktsukamoto1985.github.io/blog/posts/</link>
-    <description>Recent content in Posts on living in retirement</description>
+    <title>aiit on living in retirement</title>
+    <link>https://ktsukamoto1985.github.io/blog/tags/aiit/</link>
+    <description>Recent content in aiit on living in retirement</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 26 Dec 2020 22:36:00 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Dec 2020 22:36:00 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/tags/aiit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>サイリウムに反応して推しがこっちを向いてくれる</title>
       <link>https://ktsukamoto1985.github.io/blog/2020/12/26/o-re-no-nenecha-n/</link>
@@ -23,15 +23,6 @@
  写真1 普段は横を向いている    写真2 サイリウムを近づけるとこっちを向いてくれる   原理 なんのことはない、光センサとサーボモータをArduinoに接続し、光の強さによってサーボモータの角度を変更しているだけのこと。
 Arduinoのコードもシンプル。
 #include &amp;lt;Servo.h&amp;gt; Servo sv; void setup() { Serial.begin(9600); sv.attach(11); } void loop() { // put your main code here, to run repeatedly:  int val = analogRead(3); int angle = min((val-300)*3/4, 90); if(angle &amp;lt; 0){ angle = 0; } Serial.println(val); sv.write(angle); delay(333); } サーボモータが0度から90度の間を30度刻みで動くように角度を適当に調整した。</description>
-    </item>
-    
-    <item>
-      <title>場所</title>
-      <link>https://ktsukamoto1985.github.io/blog/2020/12/25/first-stage/</link>
-      <pubDate>Fri, 25 Dec 2020 21:41:21 +0900</pubDate>
-      
-      <guid>https://ktsukamoto1985.github.io/blog/2020/12/25/first-stage/</guid>
-      <description>github pagesの練習を兼ねて作ってみました。</description>
     </item>
     
   </channel>
