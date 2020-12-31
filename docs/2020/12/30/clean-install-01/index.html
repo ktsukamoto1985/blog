@@ -81,13 +81,13 @@
 </ul>
 <h3 id="pythonは諦めた">Pythonは諦めた</h3>
 <p>システム標準のPythonを使うことは具合が悪いので、Homebrew経由で3.9.1をインストール。その後、<code>.zshrc</code>の中身を以下のように書き換える。</p>
-<pre><code>export LDFLAGS=&quot;-L/usr/local/opt/zlib/lib&quot;
-export CPPFLAGS=&quot;-I/usr/local/opt/zlib/include&quot;
-alias python=/usr/local/bin/python3
-alias pip=/usr/local/bin/pip3.9
-</code></pre><p>その後、sourceで読み込み直した後にpipでnumpy, scipy, matplotlib, seaborn, pandas, sklearn, jupyterlabをインストールする。蛇足ながら</p>
-<pre><code>$ pip install numpy scipy matplotlib seaborn pandas sklearn jupyterlab mecab-python3
-</code></pre><p>ひとまずここで動くようになった。pyenvはあまりPythonのバージョンを変化させる必要がないことからスルーする。poetryは導入したいかもしれない。</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">export</span> <span class="nv">LDFLAGS</span><span class="o">=</span><span class="s2">&#34;-L/usr/local/opt/zlib/lib&#34;</span>
+<span class="nb">export</span> <span class="nv">CPPFLAGS</span><span class="o">=</span><span class="s2">&#34;-I/usr/local/opt/zlib/include&#34;</span>
+<span class="nb">alias</span> <span class="nv">python</span><span class="o">=</span>/usr/local/bin/python3
+<span class="nb">alias</span> <span class="nv">pip</span><span class="o">=</span>/usr/local/bin/pip3.9
+</code></pre></div><p>その後、sourceで読み込み直した後にpipでnumpy, scipy, matplotlib, seaborn, pandas, sklearn, jupyterlabをインストールする。蛇足ながら</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pip install numpy scipy matplotlib seaborn pandas sklearn jupyterlab mecab-python3
+</code></pre></div><p>ひとまずここで動くようになった。pyenvはあまりPythonのバージョンを変化させる必要がないことからスルーする。poetryは導入したいかもしれない。</p>
 
 			</div>
 		</article>
@@ -99,6 +99,8 @@ alias pip=/usr/local/bin/pip3.9
 		</div>
 		<div>
 			<ul>
+				
+				<li><a href="https://ktsukamoto1985.github.io/blog/2020/12/31/qgis-dem/">QGISで基盤地図情報を表示する(1)</a></li>
 				
 				<li><a href="https://ktsukamoto1985.github.io/blog/2020/12/30/clean-install-01/">macの再設定</a></li>
 				

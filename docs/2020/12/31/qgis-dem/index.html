@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>QGISで基盤地図情報を表示する(1)</title>
+	
+	
+	<link rel="stylesheet" href="https://ktsukamoto1985.github.io/blog/css/style.css">
+	<link rel="stylesheet" href="https://ktsukamoto1985.github.io/blog/css/syntax.css">
+	
+</head>
+<body>
+	<header>
+	==========================<br>
+	== <a href="https://ktsukamoto1985.github.io/blog/">living in retirement</a> ==<br>
+	==========================
+	<div style="float: right;">I wanna be a minimalist.</div><br>
+	<p>
+	<nav>
+			<a href="https://ktsukamoto1985.github.io/blog/"><b>Start</b></a>.
+			
+			
+			<a href="https://ktsukamoto1985.github.io/blog/posts/"><b>Posts</b></a>.
+			
+			<a href="https://ktsukamoto1985.github.io/blog/tags/"><b>Tags</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>QGISで基盤地図情報を表示する(1)</h1>
+			<b><time>31.12.2020 18:48</time></b>
+		       
+		           <a href="https://ktsukamoto1985.github.io/blog/tags/qgis">qgis</a>
+        	       
+
+			<div>
+				<p>多分何回かかかりそうなので。ひとまずは数値標高モデルから</p>
+<h2 id="数値標高モデルのダウンロード">数値標高モデルのダウンロード</h2>
+<p>基盤地図情報のダウンロードページからダウンロードする。<br>
+<a href="https://fgd.gsi.go.jp/download/menu.php">https://fgd.gsi.go.jp/download/menu.php</a></p>
+<h2 id="geotiffに変換する">geotiffに変換する</h2>
+<p>やり方を調べたけれど、これが一番やりやすかった。<br>
+Pythonを用いた基盤地図情報 数値標高データのgeotiff変換<br>
+<a href="https://qiita.com/HidKamiya/items/66b1d98503301446460c">https://qiita.com/HidKamiya/items/66b1d98503301446460c</a></p>
+<p>コマンドとして<code>python zdem2tif.py</code>のあとに続ける引数のファイル名を一括で生成したかったので、ちょっと頑張ってシェルスクリプトを書いた。</p>
+<pre><code>ls | grep DEM10B | xargs echo -n &gt; filelist.txt
+</code></pre><p>得られたファイルリストをそのまま貼り付けた。本当は一気に.shで書き上げてしまいたかったけど時間切れ。いつか考える。</p>
+<h2 id="qgisに読み込ませる">QGISに読み込ませる</h2>
+<p>geotiffに変換したラスタデータを読み込ませて表示させてみた。</p>
+
+<figure >
+    
+        <img src="https://ktsukamoto1985.github.io/blog/image/20201231-01.png"  />
+    
+    
+    <figcaption>
+        <h4>ラスタデータを読み込ませた</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>なんとなくグリッドが入っているように見えるが、これはラスタデータの切れ目を表している。おそらくデータごとに最大値と最小値でスケーリングさせているものと思われる。色別標高図を作る時は、これらを統合してしまった方が楽なので統合を行う。メニューの[ラスタ] &gt; [その他] &gt; [結合(gdal_merge)]で結合を行うことができる。ここができなかったせいでmacOSの再インストールを敢行することになった。</p>
+
+<figure >
+    
+        <img src="https://ktsukamoto1985.github.io/blog/image/20201231-02.png"  />
+    
+    
+    <figcaption>
+        <h4>ラスタデータを結合した</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>ここまできてようやく色別標高図を作成できる。レイヤのプロパティからレンダリングタイプを単バンド擬似カラー、カラーランプをSpectralに設定したものが以下の通り。</p>
+
+<figure >
+    
+        <img src="https://ktsukamoto1985.github.io/blog/image/20201231-03.png"  />
+    
+    
+    <figcaption>
+        <h4>色別標高図の作成</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>国土数値情報のベクタデータを読み込ませて重ねてみた。</p>
+
+<figure >
+    
+        <img src="https://ktsukamoto1985.github.io/blog/image/20201231-04.png"  />
+    
+    
+    <figcaption>
+        <h4>色別標高図の作成</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>色々付け足していけば、しばらく遊べそう。</p>
+
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="https://ktsukamoto1985.github.io/blog/2020/12/31/qgis-dem/">QGISで基盤地図情報を表示する(1)</a></li>
+				
+				<li><a href="https://ktsukamoto1985.github.io/blog/2020/12/30/clean-install-01/">macの再設定</a></li>
+				
+				<li><a href="https://ktsukamoto1985.github.io/blog/2020/12/26/o-re-no-nenecha-n/">サイリウムに反応して推しがこっちを向いてくれる</a></li>
+				
+				<li><a href="https://ktsukamoto1985.github.io/blog/2020/12/25/first-stage/">場所</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2020 <a href="https://ktsukamoto1985.github.io/blog/"><b>living in retirement</b></a>.
+	</p>
+</footer>
+
+</body>
+</html>

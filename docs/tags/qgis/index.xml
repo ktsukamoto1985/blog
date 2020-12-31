@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>qgis on living in retirement</title>
+    <link>https://ktsukamoto1985.github.io/blog/tags/qgis/</link>
+    <description>Recent content in qgis on living in retirement</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 31 Dec 2020 18:48:00 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/tags/qgis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>QGISで基盤地図情報を表示する(1)</title>
+      <link>https://ktsukamoto1985.github.io/blog/2020/12/31/qgis-dem/</link>
+      <pubDate>Thu, 31 Dec 2020 18:48:00 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2020/12/31/qgis-dem/</guid>
+      <description>多分何回かかかりそうなので。ひとまずは数値標高モデルから
+数値標高モデルのダウンロード 基盤地図情報のダウンロードページからダウンロードする。
+https://fgd.gsi.go.jp/download/menu.php
+geotiffに変換する やり方を調べたけれど、これが一番やりやすかった。
+Pythonを用いた基盤地図情報 数値標高データのgeotiff変換
+https://qiita.com/HidKamiya/items/66b1d98503301446460c
+コマンドとしてpython zdem2tif.pyのあとに続ける引数のファイル名を一括で生成したかったので、ちょっと頑張ってシェルスクリプトを書いた。
+ls | grep DEM10B | xargs echo -n &amp;gt; filelist.txt 得られたファイルリストをそのまま貼り付けた。本当は一気に.shで書き上げてしまいたかったけど時間切れ。いつか考える。
+QGISに読み込ませる geotiffに変換したラスタデータを読み込ませて表示させてみた。
+ ラスタデータを読み込ませた   なんとなくグリッドが入っているように見えるが、これはラスタデータの切れ目を表している。おそらくデータごとに最大値と最小値でスケーリングさせているものと思われる。色別標高図を作る時は、これらを統合してしまった方が楽なので統合を行う。メニューの[ラスタ] &amp;gt; [その他] &amp;gt; [結合(gdal_merge)]で結合を行うことができる。ここができなかったせいでmacOSの再インストールを敢行することになった。
+ ラスタデータを結合した   ここまできてようやく色別標高図を作成できる。レイヤのプロパティからレンダリングタイプを単バンド擬似カラー、カラーランプをSpectralに設定したものが以下の通り。
+ 色別標高図の作成   国土数値情報のベクタデータを読み込ませて重ねてみた。
+ 色別標高図の作成   色々付け足していけば、しばらく遊べそう。</description>
+    </item>
+    
+  </channel>
+</rss>

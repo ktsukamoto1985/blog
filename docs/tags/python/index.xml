@@ -16,7 +16,7 @@
       <description>macをクリーンインストールしたので、やったことを記す。
 環境 macOS Big Sur 11.1
 Apple Storeからインストールした  Limechat  サイトからインストールした  Chrome Vivaldi Skype Spotify zoom Microsoft 365 Google Drive Slack Arduino QGIS Dropbox  サイトからzipをダウンロードした  Atom  Homebrew  Homebrew（まずはここから） go hugo zlib python mecab mecab-ipadic  Pythonは諦めた システム標準のPythonを使うことは具合が悪いので、Homebrew経由で3.9.1をインストール。その後、.zshrcの中身を以下のように書き換える。
-export LDFLAGS=&amp;quot;-L/usr/local/opt/zlib/lib&amp;quot; export CPPFLAGS=&amp;quot;-I/usr/local/opt/zlib/include&amp;quot; alias python=/usr/local/bin/python3 alias pip=/usr/local/bin/pip3.9 その後、sourceで読み込み直した後にpipでnumpy, scipy, matplotlib, seaborn, pandas, sklearn, jupyterlabをインストールする。蛇足ながら
+export LDFLAGS=&amp;#34;-L/usr/local/opt/zlib/lib&amp;#34; export CPPFLAGS=&amp;#34;-I/usr/local/opt/zlib/include&amp;#34; alias python=/usr/local/bin/python3 alias pip=/usr/local/bin/pip3.9 その後、sourceで読み込み直した後にpipでnumpy, scipy, matplotlib, seaborn, pandas, sklearn, jupyterlabをインストールする。蛇足ながら
 $ pip install numpy scipy matplotlib seaborn pandas sklearn jupyterlab mecab-python3 ひとまずここで動くようになった。pyenvはあまりPythonのバージョンを変化させる必要がないことからスルーする。poetryは導入したいかもしれない。</description>
     </item>
     
