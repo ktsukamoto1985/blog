@@ -6,7 +6,18 @@
     <description>Recent content in Posts on living in retirement</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 26 Dec 2020 22:36:00 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Dec 2020 22:52:14 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>macの再設定</title>
+      <link>https://ktsukamoto1985.github.io/blog/2020/12/30/clean-install-01/</link>
+      <pubDate>Wed, 30 Dec 2020 22:52:14 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2020/12/30/clean-install-01/</guid>
+      <description>macをクリーンインストールしたので、やったことを記す。
+環境 macOS Big Sur 11.1
+Apple Storeからインストールした  Limechat  サイトからインストールした  Chrome Vivaldi Skype Spotify zoom Microsoft 365 Google Drive Slack Arduino QGIS Dropbox  サイトからzipをダウンロードした  Atom  Homebrew  Homebrew（まずはここから） go hugo zlib  Pythonは諦めた Big Sur 11.1だとデフォルトでPython 3.8.2が入っているようだけど、これだと何度pipでscipyをインストールしようとしてもCommand errored out with exit status 1:のエラーが出て進まない。いくつか対策方法はあるようだけど、決定的な対応策というのはどうやらなさそうなので、様子を見ることにした。それまではGoogle Collaboratoryでお茶を濁すことにする。</description>
+    </item>
+    
     <item>
       <title>サイリウムに反応して推しがこっちを向いてくれる</title>
       <link>https://ktsukamoto1985.github.io/blog/2020/12/26/o-re-no-nenecha-n/</link>
