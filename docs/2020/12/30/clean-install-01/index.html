@@ -75,9 +75,19 @@
 <li>go</li>
 <li>hugo</li>
 <li>zlib</li>
+<li>python</li>
+<li>mecab</li>
+<li>mecab-ipadic</li>
 </ul>
 <h3 id="pythonは諦めた">Pythonは諦めた</h3>
-<p>Big Sur 11.1だとデフォルトでPython 3.8.2が入っているようだけど、これだと何度pipでscipyをインストールしようとしても<code>Command errored out with exit status 1:</code>のエラーが出て進まない。いくつか対策方法はあるようだけど、決定的な対応策というのはどうやらなさそうなので、様子を見ることにした。それまではGoogle Collaboratoryでお茶を濁すことにする。</p>
+<p>システム標準のPythonを使うことは具合が悪いので、Homebrew経由で3.9.1をインストール。その後、<code>.zshrc</code>の中身を以下のように書き換える。</p>
+<pre><code>export LDFLAGS=&quot;-L/usr/local/opt/zlib/lib&quot;
+export CPPFLAGS=&quot;-I/usr/local/opt/zlib/include&quot;
+alias python=/usr/local/bin/python3
+alias pip=/usr/local/bin/pip3.9
+</code></pre><p>その後、sourceで読み込み直した後にpipでnumpy, scipy, matplotlib, seaborn, pandas, sklearn, jupyterlabをインストールする。蛇足ながら</p>
+<pre><code>$ pip install numpy scipy matplotlib seaborn pandas sklearn jupyterlab mecab-python3
+</code></pre><p>ひとまずここで動くようになった。pyenvはあまりPythonのバージョンを変化させる必要がないことからスルーする。poetryは導入したいかもしれない。</p>
 
 			</div>
 		</article>
