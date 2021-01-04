@@ -6,7 +6,24 @@
     <description>Recent content in python on living in retirement</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 30 Dec 2020 22:52:14 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Jan 2021 19:33:56 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>QGISで基盤地図情報を表示する(2)</title>
+      <link>https://ktsukamoto1985.github.io/blog/2021/01/03/gdal/</link>
+      <pubDate>Sun, 03 Jan 2021 19:33:56 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2021/01/03/gdal/</guid>
+      <description>前回記事で無事に変換できると思っていたが、いざやってみると画像変換時点でつまずいてしまった。どうやらgdalをpythonで使えるようにするため、QGISだけではなくきちんとインストールする必要がありそうだった。
+検索の結果、以下のページが出た。
+悪魔のGDAL for OSX
+https://qiita.com/harmegiddo/items/fa7ca59e636489990edb　ひとまずHomebrewでgdalをインストールする。
+brew install gdal この結果、夥しい量の依存関係とともにgdalがインストールされる。あまりに多かったので少し頭を抱える。
+その後gdal-config --versionを確認すると、きちんとインストールされていることが確認出来た。そのため、次の手順である「pipでインストールしたことにする」を実施した。以下のコマンドは元記事のコピーであり、自分がやったことを忘れずに記録するためのものである。
+pip install GDAL==$(gdal-config --version | awk -F&amp;#39;[.]&amp;#39; &amp;#39;{print $1&amp;#34;.&amp;#34;$2}&amp;#39;) ここまで実施したところ、問題なく前回記事のgeotiff変換が行えることを確認した。
+ところで、GISで色々と点を打ってみると新たな発見があって面白い。
+ 城などプロットしてみる   標高データを重ねてみると、安芸武田氏の佐東銀山城も熊谷氏の三入高松城も山上に築かれていることがわかる。対して香川氏の八木城は川沿いに見える。ストリートビューを見るときちんとこの辺りも小高い丘になっていることがわかるので、使用した数値標高モデルが5mではなく10mメッシュだったことや、色分けの段階が粗かったことなどが理由として考えられる。</description>
+    </item>
+    
     <item>
       <title>macの再設定</title>
       <link>https://ktsukamoto1985.github.io/blog/2020/12/30/clean-install-01/</link>
