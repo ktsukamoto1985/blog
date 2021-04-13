@@ -6,13 +6,38 @@
     <description>Recent content in diary on living in retirement</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 14 Mar 2021 22:02:54 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/tags/diary/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Apr 2021 23:24:13 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/tags/diary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>高校の内容をきちんと勉強しています</title>
+      <link>https://ktsukamoto1985.github.io/blog/2021/04/13/relearn/</link>
+      <pubDate>Tue, 13 Apr 2021 23:24:13 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2021/04/13/relearn/</guid>
+      <description>高校で理系に進んだので、数学はなんとかなるけど社会科が本当に弱い。ということで、YouTubeでムンディ先生の動画、また予備校講師の動画を視聴中。クオリティの高い動画を無償で見られるいい時代になった。ムンディ先生の動画シリーズは実にオーソドックスで、これを最初にさらっと眺めておくと受験知識としてのインプットがしやすそう。ただ、２次試験を乗り切れるほどではなく、センター試験（なくなったけど）ならそこそこ取れそう。
+　いろんな先生が動画をあげているので、その比較もできるのがとても良い時代。一つの出来事をとっても色々な見方があり、歴史の面白さをこの歳になって再度実感する。
+　あとこの動画シリーズ何がいいって、普通であるからゆえに細かい部分には踏み込んでいないところ。ノート取ったらその行間をたくさん細かい知識で埋め尽くせる、そういう隙間を確保しているところに良さを見出した。私のノートは左ページに板書、右ページにそこから派生した山のようなメモを好き勝手書き連ねている。もはや受験生じゃないので、やりたい放題。最終的には自分のツボを的確に突く世界史ノートが出来上がることを目論んでいる。絶対に２次試験にはでないポルトガルの歴史とかマリーン朝とか世紀末ウィーンとかバウハウスとか、本を読んで調べるのはとても楽しい。意外と役立つのは『地球の歩き方』。
+　世界史と並行して英文法も復習中。ただよびは偉大。有料コンテンツ始めてなんとなく失望感もあるけど、あれだけのコンテンツがそもそも無料だったということがおかしいのであって、駿台とかに行くよりも全然安いんだから金払っても惜しくない気がする。社会人だし。なんならさらにNHKラジオも聴き始めたので、割としっかり英語力を取り戻そうとしている。この程度の投資で小鳥遊キアラの配信が楽しめるのであれば安いもの。TOEICなんかよりキアラの配信の方が大事。
+　世界史が終わったら日本史、さらには歴史以上に弱い政経・倫理、理科も触れていない生物・地学に手を伸ばす予定。ひとまず高校の５教科はコンプリートしたい。</description>
+    </item>
+    
+    <item>
+      <title>OSをアップロードしたらgit pushできなかった</title>
+      <link>https://ktsukamoto1985.github.io/blog/2021/03/14/xcrun/</link>
+      <pubDate>Sun, 14 Mar 2021 22:56:29 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2021/03/14/xcrun/</guid>
+      <description>xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)みたいなエラーが出たのでそのまま検索。
+macOSアップデート後の『xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)&amp;hellip;』の対処法
+https://qiita.com/nishina555/items/e23d73067a5cac182a63
+あった。上記の記事通り、xcode-select --installして解決。</description>
+    </item>
+    
     <item>
       <title>防災用品を買った</title>
-      <link>https://ktsukamoto1985.github.io/blog/2021/03/14/%E9%98%B2%E7%81%BD%E7%94%A8%E5%93%81%E3%82%92%E8%B2%B7%E3%81%A3%E3%81%9F/</link>
+      <link>https://ktsukamoto1985.github.io/blog/2021/03/14/emergency_management/</link>
       <pubDate>Sun, 14 Mar 2021 22:02:54 +0900</pubDate>
       
-      <guid>https://ktsukamoto1985.github.io/blog/2021/03/14/%E9%98%B2%E7%81%BD%E7%94%A8%E5%93%81%E3%82%92%E8%B2%B7%E3%81%A3%E3%81%9F/</guid>
+      <guid>https://ktsukamoto1985.github.io/blog/2021/03/14/emergency_management/</guid>
       <description>3月11日になり、家の防災グッズを揃えなければという想いに駆られた。私が住んでいる場所は海岸からは離れており、海抜も20mくらいはあるので大きな心配はいらないが、別の要因で避難を余儀なくされる可能性はある。
 まずは救急箱の中身を充実させることから取り掛かった。包帯やガーゼを補充。あとは軍手も買った。2双で100円というのはホームセンター価格からすると若干高いような気もするが、そんなに買っても防災バッグに入らなければ意味がないので我慢することに。</description>
     </item>

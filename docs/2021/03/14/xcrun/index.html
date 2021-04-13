@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<style type=text/css>body{font-family:monospace;}</style>
-	<title>場所</title>
+	<title>OSをアップロードしたらgit pushできなかった</title>
 	
 	
 	<link rel="stylesheet" href="https://ktsukamoto1985.github.io/blog/css/style.css">
@@ -35,14 +35,17 @@
 	
 	<main>
 		<article>
-			<h1>場所</h1>
-			<b><time>25.12.2020 21:41</time></b>
+			<h1>OSをアップロードしたらgit pushできなかった</h1>
+			<b><time>14.03.2021 22:56</time></b>
 		       
 		           <a href="https://ktsukamoto1985.github.io/blog/tags/diary">diary</a>
         	       
 
 			<div>
-				<p>github pagesの練習を兼ねて作ってみました。</p>
+				<p>xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)みたいなエラーが出たのでそのまま検索。</p>
+<p>macOSアップデート後の『xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)&hellip;』の対処法<br>
+<a href="https://qiita.com/nishina555/items/e23d73067a5cac182a63">https://qiita.com/nishina555/items/e23d73067a5cac182a63</a></p>
+<p>あった。上記の記事通り、<code>xcode-select --install</code>して解決。</p>
 
 			</div>
 		</article>
