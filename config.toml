@@ -1,6 +1,6 @@
 baseURL = "https://ktsukamoto1985.github.io/blog/"
 languageCode = "ja-jp"
-title = "living in retirement"
+title = "censored"
 theme = "smol"
 publishDir = "docs"
 canonifyurls = true
