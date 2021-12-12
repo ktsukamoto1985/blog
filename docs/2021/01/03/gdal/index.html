@@ -25,6 +25,8 @@
 			
 			<a href="https://ktsukamoto1985.github.io/blog/posts/"><b>Posts</b></a>.
 			
+			<a href="https://ktsukamoto1985.github.io/blog/categories/"><b>Categories</b></a>.
+			
 			<a href="https://ktsukamoto1985.github.io/blog/tags/"><b>Tags</b></a>.
 			
 	</nav>
@@ -51,10 +53,10 @@
 悪魔のGDAL for OSX<br>
 <a href="https://qiita.com/harmegiddo/items/fa7ca59e636489990edb">https://qiita.com/harmegiddo/items/fa7ca59e636489990edb</a>　　
 ひとまずHomebrewでgdalをインストールする。</p>
-<div class="highlight"><pre class="chroma"><code class="language-zsh" data-lang="zsh">brew install gdal
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh">brew install gdal
 </code></pre></div><p>この結果、夥しい量の依存関係とともにgdalがインストールされる。あまりに多かったので少し頭を抱える。</p>
 <p>その後<code>gdal-config --version</code>を確認すると、きちんとインストールされていることが確認出来た。そのため、次の手順である「pipでインストールしたことにする」を実施した。以下のコマンドは元記事のコピーであり、自分がやったことを忘れずに記録するためのものである。</p>
-<div class="highlight"><pre class="chroma"><code class="language-zsh" data-lang="zsh">pip install <span class="nv">GDAL</span><span class="o">==</span><span class="k">$(</span>gdal-config --version <span class="p">|</span> awk -F<span class="s1">&#39;[.]&#39;</span> <span class="s1">&#39;{print $1&#34;.&#34;$2}&#39;</span><span class="k">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh">pip install <span class="nv">GDAL</span><span class="o">==</span><span class="k">$(</span>gdal-config --version <span class="p">|</span> awk -F<span class="s1">&#39;[.]&#39;</span> <span class="s1">&#39;{print $1&#34;.&#34;$2}&#39;</span><span class="k">)</span>
 </code></pre></div><p>ここまで実施したところ、問題なく前回記事のgeotiff変換が行えることを確認した。</p>
 <p>ところで、GISで色々と点を打ってみると新たな発見があって面白い。</p>
 
@@ -84,6 +86,8 @@
 		<div>
 			<ul>
 				
+				<li><a href="https://ktsukamoto1985.github.io/blog/2021/12/12/windows-hugo/">Windowsにhugo環境を作る</a></li>
+				
 				<li><a href="https://ktsukamoto1985.github.io/blog/2021/04/13/relearn/">高校の内容をきちんと勉強しています</a></li>
 				
 				<li><a href="https://ktsukamoto1985.github.io/blog/2021/03/14/xcrun/">OSをアップロードしたらgit pushできなかった</a></li>
@@ -91,8 +95,6 @@
 				<li><a href="https://ktsukamoto1985.github.io/blog/2021/03/14/emergency_management/">防災用品を買った</a></li>
 				
 				<li><a href="https://ktsukamoto1985.github.io/blog/2021/01/11/jupyterlab/">Jupyter LabでPDF出力できなかった時</a></li>
-				
-				<li><a href="https://ktsukamoto1985.github.io/blog/2021/01/03/gdal/">QGISで基盤地図情報を表示する(2)</a></li>
 				
 			</ul>
 		</div>

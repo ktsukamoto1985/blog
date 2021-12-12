@@ -20,7 +20,7 @@
 なので、推しにレスしてもらえるシステムを作った。
 成果物 サイリウムを振ると、推しのアクキーが振り向いてレスをくれる。
 写真で見ていただくのが手っ取り早いと思うので。
- 写真1 普段は横を向いている    写真2 サイリウムを近づけるとこっちを向いてくれる   原理 なんのことはない、光センサとサーボモータをArduinoに接続し、光の強さによってサーボモータの角度を変更しているだけのこと。
+写真1 普段は横を向いている写真2 サイリウムを近づけるとこっちを向いてくれる原理 なんのことはない、光センサとサーボモータをArduinoに接続し、光の強さによってサーボモータの角度を変更しているだけのこと。
 Arduinoのコードもシンプル。
 #include &amp;lt;Servo.h&amp;gt; Servo sv; void setup() { Serial.begin(9600); sv.attach(11); } void loop() { // put your main code here, to run repeatedly:  int val = analogRead(3); int angle = min((val-300)*3/4, 90); if(angle &amp;lt; 0){ angle = 0; } Serial.println(val); sv.write(angle); delay(333); } サーボモータが0度から90度の間を30度刻みで動くように角度を適当に調整した。</description>
     </item>
