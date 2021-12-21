@@ -8,11 +8,38 @@
     <language>ja-jp</language>
     <lastBuildDate>Sun, 12 Dec 2021 22:47:13 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>diary</title>
-      <link>https://ktsukamoto1985.github.io/blog/tags/diary/</link>
+      <title>windows10</title>
+      <link>https://ktsukamoto1985.github.io/blog/tags/windows10/</link>
       <pubDate>Sun, 12 Dec 2021 22:47:13 +0900</pubDate>
       
-      <guid>https://ktsukamoto1985.github.io/blog/tags/diary/</guid>
+      <guid>https://ktsukamoto1985.github.io/blog/tags/windows10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>study</title>
+      <link>https://ktsukamoto1985.github.io/blog/tags/study/</link>
+      <pubDate>Tue, 13 Apr 2021 23:24:13 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/tags/study/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mac</title>
+      <link>https://ktsukamoto1985.github.io/blog/tags/mac/</link>
+      <pubDate>Sun, 14 Mar 2021 22:56:29 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>disaster_prevention</title>
+      <link>https://ktsukamoto1985.github.io/blog/tags/disaster_prevention/</link>
+      <pubDate>Sun, 14 Mar 2021 22:02:54 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/tags/disaster_prevention/</guid>
       <description></description>
     </item>
     
@@ -35,15 +62,6 @@
     </item>
     
     <item>
-      <title>qgis</title>
-      <link>https://ktsukamoto1985.github.io/blog/tags/qgis/</link>
-      <pubDate>Sun, 03 Jan 2021 19:33:56 +0900</pubDate>
-      
-      <guid>https://ktsukamoto1985.github.io/blog/tags/qgis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>aiit</title>
       <link>https://ktsukamoto1985.github.io/blog/tags/aiit/</link>
       <pubDate>Sat, 26 Dec 2020 22:36:00 +0900</pubDate>
@@ -58,15 +76,6 @@
       <pubDate>Sat, 26 Dec 2020 22:36:00 +0900</pubDate>
       
       <guid>https://ktsukamoto1985.github.io/blog/tags/arduino/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>idol</title>
-      <link>https://ktsukamoto1985.github.io/blog/tags/idol/</link>
-      <pubDate>Sat, 26 Dec 2020 22:36:00 +0900</pubDate>
-      
-      <guid>https://ktsukamoto1985.github.io/blog/tags/idol/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on censored</title>
+    <link>https://ktsukamoto1985.github.io/blog/tags/mac/</link>
+    <description>Recent content in Mac on censored</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 14 Mar 2021 22:56:29 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OSをアップロードしたらgit pushできなかった</title>
+      <link>https://ktsukamoto1985.github.io/blog/2021/03/14/xcrun/</link>
+      <pubDate>Sun, 14 Mar 2021 22:56:29 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2021/03/14/xcrun/</guid>
+      <description>xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)みたいなエラーが出たのでそのまま検索。
+macOSアップデート後の『xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)&amp;hellip;』の対処法
+https://qiita.com/nishina555/items/e23d73067a5cac182a63
+あった。上記の記事通り、xcode-select --installして解決。</description>
+    </item>
+    
+    <item>
+      <title>Jupyter LabでPDF出力できなかった時</title>
+      <link>https://ktsukamoto1985.github.io/blog/2021/01/11/jupyterlab/</link>
+      <pubDate>Mon, 11 Jan 2021 23:18:33 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2021/01/11/jupyterlab/</guid>
+      <description>なぜかできなかったので調べたら、以下の記事を見つけた。
+Jupyter notebookからpdfに変換する[mac]
+https://qiita.com/yasudadesu/items/7b4edec4498e425bf50c
+記事を参考に、以下のコマンドを叩いてみる。
+brew install pandoc brew install basictex とりあえずこれで動いたのでよしとする。</description>
+    </item>
+    
+    <item>
+      <title>QGISで基盤地図情報を表示する(2)</title>
+      <link>https://ktsukamoto1985.github.io/blog/2021/01/03/gdal/</link>
+      <pubDate>Sun, 03 Jan 2021 19:33:56 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2021/01/03/gdal/</guid>
+      <description>前回記事で無事に変換できると思っていたが、いざやってみると画像変換時点でつまずいてしまった。どうやらgdalをpythonで使えるようにするため、QGISだけではなくきちんとインストールする必要がありそうだった。
+検索の結果、以下のページが出た。
+悪魔のGDAL for OSX
+https://qiita.com/harmegiddo/items/fa7ca59e636489990edb　ひとまずHomebrewでgdalをインストールする。
+brew install gdal この結果、夥しい量の依存関係とともにgdalがインストールされる。あまりに多かったので少し頭を抱える。
+その後gdal-config --versionを確認すると、きちんとインストールされていることが確認出来た。そのため、次の手順である「pipでインストールしたことにする」を実施した。以下のコマンドは元記事のコピーであり、自分がやったことを忘れずに記録するためのものである。
+pip install GDAL==$(gdal-config --version | awk -F&amp;#39;[.]&amp;#39; &amp;#39;{print $1&amp;#34;.&amp;#34;$2}&amp;#39;) ここまで実施したところ、問題なく前回記事のgeotiff変換が行えることを確認した。
+ところで、GISで色々と点を打ってみると新たな発見があって面白い。
+城などプロットしてみる標高データを重ねてみると、安芸武田氏の佐東銀山城も熊谷氏の三入高松城も山上に築かれていることがわかる。対して香川氏の八木城は川沿いに見える。ストリートビューを見るときちんとこの辺りも小高い丘になっていることがわかるので、使用した数値標高モデルが5mではなく10mメッシュだったことや、色分けの段階が粗かったことなどが理由として考えられる。</description>
+    </item>
+    
+    <item>
+      <title>QGISで基盤地図情報を表示する(1)</title>
+      <link>https://ktsukamoto1985.github.io/blog/2020/12/31/qgis-dem/</link>
+      <pubDate>Thu, 31 Dec 2020 18:48:00 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2020/12/31/qgis-dem/</guid>
+      <description>多分何回かかかりそうなので。ひとまずは数値標高モデルから
+数値標高モデルのダウンロード 基盤地図情報のダウンロードページからダウンロードする。
+https://fgd.gsi.go.jp/download/menu.php
+geotiffに変換する やり方を調べたけれど、これが一番やりやすかった。
+Pythonを用いた基盤地図情報 数値標高データのgeotiff変換
+https://qiita.com/HidKamiya/items/66b1d98503301446460c
+コマンドとしてpython zdem2tif.pyのあとに続ける引数のファイル名を一括で生成したかったので、ちょっと頑張ってシェルスクリプトを書いた。
+ls | grep DEM10B | xargs echo -n &amp;gt; filelist.txt 得られたファイルリストをそのまま貼り付けた。本当は一気に.shで書き上げてしまいたかったけど時間切れ。いつか考える。
+QGISに読み込ませる geotiffに変換したラスタデータを読み込ませて表示させてみた。
+ラスタデータを読み込ませたなんとなくグリッドが入っているように見えるが、これはラスタデータの切れ目を表している。おそらくデータごとに最大値と最小値でスケーリングさせているものと思われる。色別標高図を作る時は、これらを統合してしまった方が楽なので統合を行う。メニューの[ラスタ] &amp;gt; [その他] &amp;gt; [結合(gdal_merge)]で結合を行うことができる。ここができなかったせいでmacOSの再インストールを敢行することになった。
+ラスタデータを結合したここまできてようやく色別標高図を作成できる。レイヤのプロパティからレンダリングタイプを単バンド擬似カラー、カラーランプをSpectralに設定したものが以下の通り。
+色別標高図の作成国土数値情報のベクタデータを読み込ませて重ねてみた。
+色別標高図の作成色々付け足していけば、しばらく遊べそう。</description>
+    </item>
+    
+    <item>
+      <title>macの再設定</title>
+      <link>https://ktsukamoto1985.github.io/blog/2020/12/30/clean-install-01/</link>
+      <pubDate>Wed, 30 Dec 2020 22:52:14 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2020/12/30/clean-install-01/</guid>
+      <description>macをクリーンインストールしたので、やったことを記す。
+環境 macOS Big Sur 11.1
+Apple Storeからインストールした  Limechat  サイトからインストールした  Chrome Vivaldi Skype Spotify zoom Microsoft 365 Google Drive Slack Arduino QGIS Dropbox  サイトからzipをダウンロードした  Atom  Homebrew  Homebrew（まずはここから） go hugo zlib python mecab mecab-ipadic  Pythonは諦めた システム標準のPythonを使うことは具合が悪いので、Homebrew経由で3.9.1をインストール。その後、.zshrcの中身を以下のように書き換える。
+export LDFLAGS=&amp;#34;-L/usr/local/opt/zlib/lib&amp;#34; export CPPFLAGS=&amp;#34;-I/usr/local/opt/zlib/include&amp;#34; alias python=/usr/local/bin/python3 alias pip=/usr/local/bin/pip3.9 その後、sourceで読み込み直した後にpipでnumpy, scipy, matplotlib, seaborn, pandas, sklearn, jupyterlabをインストールする。蛇足ながら
+$ pip install numpy scipy matplotlib seaborn pandas sklearn jupyterlab mecab-python3 ひとまずここで動くようになった。pyenvはあまりPythonのバージョンを変化させる必要がないことからスルーする。poetryは導入したいかもしれない。</description>
+    </item>
+    
+    <item>
+      <title>場所</title>
+      <link>https://ktsukamoto1985.github.io/blog/2020/12/25/first-stage/</link>
+      <pubDate>Fri, 25 Dec 2020 21:41:21 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2020/12/25/first-stage/</guid>
+      <description>github pagesの練習を兼ねて作ってみました。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,29 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>idol on censored</title>
-    <link>https://ktsukamoto1985.github.io/blog/tags/idol/</link>
-    <description>Recent content in idol on censored</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Sat, 26 Dec 2020 22:36:00 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/tags/idol/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>サイリウムに反応して推しがこっちを向いてくれる</title>
-      <link>https://ktsukamoto1985.github.io/blog/2020/12/26/o-re-no-nenecha-n/</link>
-      <pubDate>Sat, 26 Dec 2020 22:36:00 +0900</pubDate>
-      
-      <guid>https://ktsukamoto1985.github.io/blog/2020/12/26/o-re-no-nenecha-n/</guid>
-      <description>前置き この記事はAIIT(産業技術大学院大学) Advent Calendar 2020、3日目の記事です。
-やるって主催には連絡しておきながらまったくネタが浮かばずこの体たらく。
-動機 昔、地下アイドルを熱心に追いかけていたことがあった。
-普段は後方彼氏面でライブを見ていたけど、やっぱり推しからのレスはうれしいもの。
-なので、推しにレスしてもらえるシステムを作った。
-成果物 サイリウムを振ると、推しのアクキーが振り向いてレスをくれる。
-写真で見ていただくのが手っ取り早いと思うので。
-写真1 普段は横を向いている写真2 サイリウムを近づけるとこっちを向いてくれる原理 なんのことはない、光センサとサーボモータをArduinoに接続し、光の強さによってサーボモータの角度を変更しているだけのこと。
-Arduinoのコードもシンプル。
-#include &amp;lt;Servo.h&amp;gt; Servo sv; void setup() { Serial.begin(9600); sv.attach(11); } void loop() { // put your main code here, to run repeatedly:  int val = analogRead(3); int angle = min((val-300)*3/4, 90); if(angle &amp;lt; 0){ angle = 0; } Serial.println(val); sv.write(angle); delay(333); } サーボモータが0度から90度の間を30度刻みで動くように角度を適当に調整した。</description>
-    </item>
-    
-  </channel>
-</rss>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>diary on censored</title>
+    <link>https://ktsukamoto1985.github.io/blog/categories/diary/</link>
+    <description>Recent content in diary on censored</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 12 Dec 2021 22:47:13 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/categories/diary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windowsにhugo環境を作る</title>
+      <link>https://ktsukamoto1985.github.io/blog/2021/12/12/windows-hugo/</link>
+      <pubDate>Sun, 12 Dec 2021 22:47:13 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2021/12/12/windows-hugo/</guid>
+      <description>やったことのみ簡潔に記す。
+ Gitのインストール
+公式よりダウンロードしてインストール。 hugoのインストール
+https://dev-labo.com/windows/start-up-hugo/ を参考にした。環境変数まで完了 リポジトリのクローン
+これについてはPersonal access tokensを利用した。方法はGitHubのドキュメントに書いてある。
+https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token  </description>
+    </item>
+    
+    <item>
+      <title>高校の内容をきちんと勉強しています</title>
+      <link>https://ktsukamoto1985.github.io/blog/2021/04/13/relearn/</link>
+      <pubDate>Tue, 13 Apr 2021 23:24:13 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2021/04/13/relearn/</guid>
+      <description>高校で理系に進んだので、数学はなんとかなるけど社会科が本当に弱い。ということで、YouTubeでムンディ先生の動画、また予備校講師の動画を視聴中。クオリティの高い動画を無償で見られるいい時代になった。ムンディ先生の動画シリーズは実にオーソドックスで、これを最初にさらっと眺めておくと受験知識としてのインプットがしやすそう。ただ、２次試験を乗り切れるほどではなく、センター試験（なくなったけど）ならそこそこ取れそう。
+　いろんな先生が動画をあげているので、その比較もできるのがとても良い時代。一つの出来事をとっても色々な見方があり、歴史の面白さをこの歳になって再度実感する。
+　あとこの動画シリーズ何がいいって、普通であるからゆえに細かい部分には踏み込んでいないところ。ノート取ったらその行間をたくさん細かい知識で埋め尽くせる、そういう隙間を確保しているところに良さを見出した。私のノートは左ページに板書、右ページにそこから派生した山のようなメモを好き勝手書き連ねている。もはや受験生じゃないので、やりたい放題。最終的には自分のツボを的確に突く世界史ノートが出来上がることを目論んでいる。絶対に２次試験にはでないポルトガルの歴史とかマリーン朝とか世紀末ウィーンとかバウハウスとか、本を読んで調べるのはとても楽しい。意外と役立つのは『地球の歩き方』。
+　世界史と並行して英文法も復習中。ただよびは偉大。有料コンテンツ始めてなんとなく失望感もあるけど、あれだけのコンテンツがそもそも無料だったということがおかしいのであって、駿台とかに行くよりも全然安いんだから金払っても惜しくない気がする。社会人だし。なんならさらにNHKラジオも聴き始めたので、割としっかり英語力を取り戻そうとしている。この程度の投資で小鳥遊キアラの配信が楽しめるのであれば安いもの。TOEICなんかよりキアラの配信の方が大事。
+　世界史が終わったら日本史、さらには歴史以上に弱い政経・倫理、理科も触れていない生物・地学に手を伸ばす予定。ひとまず高校の５教科はコンプリートしたい。</description>
+    </item>
+    
+    <item>
+      <title>OSをアップロードしたらgit pushできなかった</title>
+      <link>https://ktsukamoto1985.github.io/blog/2021/03/14/xcrun/</link>
+      <pubDate>Sun, 14 Mar 2021 22:56:29 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2021/03/14/xcrun/</guid>
+      <description>xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)みたいなエラーが出たのでそのまま検索。
+macOSアップデート後の『xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)&amp;hellip;』の対処法
+https://qiita.com/nishina555/items/e23d73067a5cac182a63
+あった。上記の記事通り、xcode-select --installして解決。</description>
+    </item>
+    
+    <item>
+      <title>防災用品を買った</title>
+      <link>https://ktsukamoto1985.github.io/blog/2021/03/14/emergency_management/</link>
+      <pubDate>Sun, 14 Mar 2021 22:02:54 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2021/03/14/emergency_management/</guid>
+      <description>3月11日になり、家の防災グッズを揃えなければという想いに駆られた。私が住んでいる場所は海岸からは離れており、海抜も20mくらいはあるので大きな心配はいらないが、別の要因で避難を余儀なくされる可能性はある。
+まずは救急箱の中身を充実させることから取り掛かった。包帯やガーゼを補充。あとは軍手も買った。2双で100円というのはホームセンター価格からすると若干高いような気もするが、そんなに買っても防災バッグに入らなければ意味がないので我慢することに。</description>
+    </item>
+    
+    <item>
+      <title>Jupyter LabでPDF出力できなかった時</title>
+      <link>https://ktsukamoto1985.github.io/blog/2021/01/11/jupyterlab/</link>
+      <pubDate>Mon, 11 Jan 2021 23:18:33 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2021/01/11/jupyterlab/</guid>
+      <description>なぜかできなかったので調べたら、以下の記事を見つけた。
+Jupyter notebookからpdfに変換する[mac]
+https://qiita.com/yasudadesu/items/7b4edec4498e425bf50c
+記事を参考に、以下のコマンドを叩いてみる。
+brew install pandoc brew install basictex とりあえずこれで動いたのでよしとする。</description>
+    </item>
+    
+    <item>
+      <title>macの再設定</title>
+      <link>https://ktsukamoto1985.github.io/blog/2020/12/30/clean-install-01/</link>
+      <pubDate>Wed, 30 Dec 2020 22:52:14 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2020/12/30/clean-install-01/</guid>
+      <description>macをクリーンインストールしたので、やったことを記す。
+環境 macOS Big Sur 11.1
+Apple Storeからインストールした  Limechat  サイトからインストールした  Chrome Vivaldi Skype Spotify zoom Microsoft 365 Google Drive Slack Arduino QGIS Dropbox  サイトからzipをダウンロードした  Atom  Homebrew  Homebrew（まずはここから） go hugo zlib python mecab mecab-ipadic  Pythonは諦めた システム標準のPythonを使うことは具合が悪いので、Homebrew経由で3.9.1をインストール。その後、.zshrcの中身を以下のように書き換える。
+export LDFLAGS=&amp;#34;-L/usr/local/opt/zlib/lib&amp;#34; export CPPFLAGS=&amp;#34;-I/usr/local/opt/zlib/include&amp;#34; alias python=/usr/local/bin/python3 alias pip=/usr/local/bin/pip3.9 その後、sourceで読み込み直した後にpipでnumpy, scipy, matplotlib, seaborn, pandas, sklearn, jupyterlabをインストールする。蛇足ながら
+$ pip install numpy scipy matplotlib seaborn pandas sklearn jupyterlab mecab-python3 ひとまずここで動くようになった。pyenvはあまりPythonのバージョンを変化させる必要がないことからスルーする。poetryは導入したいかもしれない。</description>
+    </item>
+    
+    <item>
+      <title>場所</title>
+      <link>https://ktsukamoto1985.github.io/blog/2020/12/25/first-stage/</link>
+      <pubDate>Fri, 25 Dec 2020 21:41:21 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2020/12/25/first-stage/</guid>
+      <description>github pagesの練習を兼ねて作ってみました。</description>
+    </item>
+    
+  </channel>
+</rss>

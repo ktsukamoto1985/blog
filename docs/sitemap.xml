@@ -8,7 +8,7 @@
     <loc>https://ktsukamoto1985.github.io/blog/</loc>
     <lastmod>2021-12-12T22:47:13+09:00</lastmod>
   </url><url>
-    <loc>https://ktsukamoto1985.github.io/blog/tags/diary/</loc>
+    <loc>https://ktsukamoto1985.github.io/blog/categories/diary/</loc>
     <lastmod>2021-12-12T22:47:13+09:00</lastmod>
   </url><url>
     <loc>https://ktsukamoto1985.github.io/blog/posts/</loc>
@@ -17,17 +17,26 @@
     <loc>https://ktsukamoto1985.github.io/blog/tags/</loc>
     <lastmod>2021-12-12T22:47:13+09:00</lastmod>
   </url><url>
-    <loc>https://ktsukamoto1985.github.io/blog/categories/windows10/</loc>
+    <loc>https://ktsukamoto1985.github.io/blog/tags/windows10/</loc>
     <lastmod>2021-12-12T22:47:13+09:00</lastmod>
   </url><url>
     <loc>https://ktsukamoto1985.github.io/blog/2021/12/12/windows-hugo/</loc>
     <lastmod>2021-12-12T22:47:13+09:00</lastmod>
   </url><url>
+    <loc>https://ktsukamoto1985.github.io/blog/tags/study/</loc>
+    <lastmod>2021-04-13T23:24:13+09:00</lastmod>
+  </url><url>
     <loc>https://ktsukamoto1985.github.io/blog/2021/04/13/relearn/</loc>
     <lastmod>2021-04-13T23:24:13+09:00</lastmod>
   </url><url>
+    <loc>https://ktsukamoto1985.github.io/blog/tags/mac/</loc>
+    <lastmod>2021-03-14T22:56:29+09:00</lastmod>
+  </url><url>
     <loc>https://ktsukamoto1985.github.io/blog/2021/03/14/xcrun/</loc>
     <lastmod>2021-03-14T22:56:29+09:00</lastmod>
+  </url><url>
+    <loc>https://ktsukamoto1985.github.io/blog/tags/disaster_prevention/</loc>
+    <lastmod>2021-03-14T22:02:54+09:00</lastmod>
   </url><url>
     <loc>https://ktsukamoto1985.github.io/blog/2021/03/14/emergency_management/</loc>
     <lastmod>2021-03-14T22:02:54+09:00</lastmod>
@@ -41,7 +50,7 @@
     <loc>https://ktsukamoto1985.github.io/blog/tags/python/</loc>
     <lastmod>2021-01-03T19:33:56+09:00</lastmod>
   </url><url>
-    <loc>https://ktsukamoto1985.github.io/blog/tags/qgis/</loc>
+    <loc>https://ktsukamoto1985.github.io/blog/categories/qgis/</loc>
     <lastmod>2021-01-03T19:33:56+09:00</lastmod>
   </url><url>
     <loc>https://ktsukamoto1985.github.io/blog/2021/01/03/gdal/</loc>
@@ -59,7 +68,7 @@
     <loc>https://ktsukamoto1985.github.io/blog/tags/arduino/</loc>
     <lastmod>2020-12-26T22:36:00+09:00</lastmod>
   </url><url>
-    <loc>https://ktsukamoto1985.github.io/blog/tags/idol/</loc>
+    <loc>https://ktsukamoto1985.github.io/blog/categories/idol/</loc>
     <lastmod>2020-12-26T22:36:00+09:00</lastmod>
   </url><url>
     <loc>https://ktsukamoto1985.github.io/blog/2020/12/26/o-re-no-nenecha-n/</loc>
