@@ -6,7 +6,17 @@
     <description>Recent content on censored</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 12 Dec 2021 22:47:13 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Dec 2021 23:03:20 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windowsに変えたので設定を記すなど</title>
+      <link>https://ktsukamoto1985.github.io/blog/2021/12/25/windows-setup/</link>
+      <pubDate>Sat, 25 Dec 2021 23:03:20 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2021/12/25/windows-setup/</guid>
+      <description>MacBook Airだとzoomで画面共有すると動きが途端に重くなるという困った状況に。 しょうがないのでWindowsのゲーミングPCを購入した。
+インストールした  Google Earth Discord Slack VSCode Minecraft OBS Skype Limechat Google Chrome zoom Vivaldi Google Drive  </description>
+    </item>
+    
     <item>
       <title>Windowsにhugo環境を作る</title>
       <link>https://ktsukamoto1985.github.io/blog/2021/12/12/windows-hugo/</link>
