@@ -6,7 +6,23 @@
     <description>Recent content in Posts on censored</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 25 Dec 2021 23:03:20 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Jan 2022 21:22:21 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>J.S.ミルの文章を少しだけ訳してみる 01</title>
+      <link>https://ktsukamoto1985.github.io/blog/2022/01/01/st.andrews_01/</link>
+      <pubDate>Sat, 01 Jan 2022 21:22:21 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2022/01/01/st.andrews_01/</guid>
+      <description>J.S.ミルの『大学教育について』を岩波文庫で読んでいるが、一部分だけ原書でも読むことを試みたく思い、原文をwikisourceからひっぱってきた。素人が岩波文庫の訳とも照らし合わせながら一文ずつ精読していく感じなので、間違っていても特に責任は取らない。
+ Much more might be said respecting classical instruction, and literary cultivation in general, as a part of liberal education.
+ という一文。
+Much moreが主語、might be saidが動詞なので、「とてもたくさんのことが言われるだろう」のようなことが書かれていることが推測できる。mightがここで使われていることから、仮定法が予想される。次の文は現在形なので、なおさら仮定法の味を出したほうがそれっぽくなる気がする。
+そのあとのrespectingは前置詞で「～に関して」という意味なので、そのあとには名詞が続く。classical instructionは古典の指導みたいなことだろうから「古典教育」、literary cultivationは文学を耕すとかそういう感じだから「文学教育」とひとまずおく。これは岩波文庫の訳もそうなっていた。後ろに続くin generalは「一般的な/に」という意味だが、これはコンマの位置を見るとliterary cultivationのみにかかっているような気がする。まとめると「古典教育や一般的な文学教育に関して」となるだろうか。
+as a part of liberal educationはそのまま「一般教養の一部として」。liberal educationはいわゆるリベラルアーツの教育であり、一般教養と訳してかまわないと思われる。
+これらをつなげると、「古典教育や一般的な文学教育に関しては、一般教養の一部としてまだまだ言うことがあるのかもしれない」となる。「とてもたくさんのことが言われるかもしれない」ではあまりにも直訳すぎるので能動的に変えてみた。もしかしたら「言うべきことがあるだろう」くらいまで強めてもいいのかもしれないが、あくまで仮定法なので。
+日本語に訳すると古典教育も文学教育も同じ教育だが、どちらもeducationではない。もしかしたら意図的にinstructionやcultivationとeducationとの間に差を設けているのかもしれないがこれは深読みのし過ぎの可能性もある。</description>
+    </item>
+    
     <item>
       <title>Windowsに変えたので設定を記すなど</title>
       <link>https://ktsukamoto1985.github.io/blog/2021/12/25/windows-setup/</link>
