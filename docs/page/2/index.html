@@ -40,6 +40,23 @@
 		
 		
 			<article>
+	<h1><a href="https://ktsukamoto1985.github.io/blog/2020/12/30/clean-install-01/">macの再設定</a></h1>
+	<b><time>30.12.2020 22:52</time></b>
+	
+	<a href="https://ktsukamoto1985.github.io/blog/tags/mac">Mac</a>
+	
+	<div>
+		macをクリーンインストールしたので、やったことを記す。
+環境 macOS Big Sur 11.1
+Apple Storeからインストールした  Limechat  サイトからインストールした  Chrome Vivaldi Skype Spotify zoom Microsoft 365 Google Drive Slack Arduino QGIS Dropbox  サイトからzipをダウンロードした  Atom  Homebrew  Homebrew（まずはここから） go hugo zlib python mecab mecab-ipadic  Pythonは諦めた システム標準のPythonを使うことは具合が悪いので、Homebrew経由で3.9.1をインストール。その後、.zshrcの中身を以下のように書き換える。
+export LDFLAGS=&#34;-L/usr/local/opt/zlib/lib&#34; export CPPFLAGS=&#34;-I/usr/local/opt/zlib/include&#34; alias python=/usr/local/bin/python3 alias pip=/usr/local/bin/pip3.9 その後、sourceで読み込み直した後にpipでnumpy, scipy, matplotlib, seaborn, pandas, sklearn, jupyterlabをインストールする。蛇足ながら
+$ pip install numpy scipy matplotlib seaborn pandas sklearn jupyterlab mecab-python3 ひとまずここで動くようになった。pyenvはあまりPythonのバージョンを変化させる必要がないことからスルーする。poetryは導入したいかもしれない。
+		
+	</div>
+</article>
+
+		
+			<article>
 	<h1><a href="https://ktsukamoto1985.github.io/blog/2020/12/26/o-re-no-nenecha-n/">サイリウムに反応して推しがこっちを向いてくれる</a></h1>
 	<b><time>26.12.2020 22:36</time></b>
 	

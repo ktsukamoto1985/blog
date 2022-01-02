@@ -40,6 +40,23 @@
 		
 		
 			<article>
+	<h1><a href="https://ktsukamoto1985.github.io/blog/2022/01/02/st.andrews_02/">J.S.ミルの文章を少しだけ訳してみる 02</a></h1>
+	<b><time>02.01.2022 17:35</time></b>
+	
+	<a href="https://ktsukamoto1985.github.io/blog/tags/j.s.mill">J.S.Mill</a>
+	
+	<div>
+		前回に引き続き。今回は前回の続きとなる一文を訳することに。
+ Much more might be said respecting classical instruction, and literary cultivation in general, as a part of liberal education. But it is time to speak of the uses of scientific instruction: or rather its indispensable necessity, for it is recommended by every consideration which pleads for any high order of intellectual education at all.
+The most obvious part of the value of scientific instruction, the mere information that it gives, speaks for itself.
+		
+			<a href="https://ktsukamoto1985.github.io/blog/2022/01/02/st.andrews_02/">Read more...</a>
+		
+	</div>
+</article>
+
+		
+			<article>
 	<h1><a href="https://ktsukamoto1985.github.io/blog/2022/01/01/st.andrews_01/">J.S.ミルの文章を少しだけ訳してみる 01</a></h1>
 	<b><time>01.01.2022 21:22</time></b>
 	
@@ -47,13 +64,10 @@
 	
 	<div>
 		J.S.ミルの『大学教育について』を岩波文庫で読んでいるが、一部分だけ原書でも読むことを試みたく思い、原文をwikisourceからひっぱってきた。素人が岩波文庫の訳とも照らし合わせながら一文ずつ精読していく感じなので、間違っていても特に責任は取らない。
- Much more might be said respecting classical instruction, and literary cultivation in general, as a part of liberal education.
- という一文。
-Much moreが主語、might be saidが動詞なので、「とてもたくさんのことが言われるだろう」のようなことが書かれていることが推測できる。mightがここで使われていることから、仮定法が予想される。次の文は現在形なので、なおさら仮定法の味を出したほうがそれっぽくなる気がする。
-そのあとのrespectingは前置詞で「～に関して」という意味なので、そのあとには名詞が続く。classical instructionは古典の指導みたいなことだろうから「古典教育」、literary cultivationは文学を耕すとかそういう感じだから「文学教育」とひとまずおく。これは岩波文庫の訳もそうなっていた。後ろに続くin generalは「一般的な/に」という意味だが、これはコンマの位置を見るとliterary cultivationのみにかかっているような気がする。まとめると「古典教育や一般的な文学教育に関して」となるだろうか。
-as a part of liberal educationはそのまま「一般教養の一部として」。liberal educationはいわゆるリベラルアーツの教育であり、一般教養と訳してかまわないと思われる。
-これらをつなげると、「古典教育や一般的な文学教育に関しては、一般教養の一部としてまだまだ言うことがあるのかもしれない」となる。「とてもたくさんのことが言われるかもしれない」ではあまりにも直訳すぎるので能動的に変えてみた。もしかしたら「言うべきことがあるだろう」くらいまで強めてもいいのかもしれないが、あくまで仮定法なので。
-日本語に訳すると古典教育も文学教育も同じ教育だが、どちらもeducationではない。もしかしたら意図的にinstructionやcultivationとeducationとの間に差を設けているのかもしれないがこれは深読みのし過ぎの可能性もある。
+ Much more might be said respecting classical instruction, and literary cultivation in general, as a part of liberal education. But it is time to speak of the uses of scientific instruction: or rather its indispensable necessity, for it is recommended by every consideration which pleads for any high order of intellectual education at all.
+The most obvious part of the value of scientific instruction, the mere information that it gives, speaks for itself.
+		
+			<a href="https://ktsukamoto1985.github.io/blog/2022/01/01/st.andrews_01/">Read more...</a>
 		
 	</div>
 </article>
@@ -204,23 +218,6 @@ QGISに読み込ませる geotiffに変換したラスタデータを読み込�
 ラスタデータを結合したここまできてようやく色別標高図を作成できる。レイヤのプロパティからレンダリングタイプを単バンド擬似カラー、カラーランプをSpectralに設定したものが以下の通り。
 色別標高図の作成国土数値情報のベクタデータを読み込ませて重ねてみた。
 色別標高図の作成色々付け足していけば、しばらく遊べそう。
-		
-	</div>
-</article>
-
-		
-			<article>
-	<h1><a href="https://ktsukamoto1985.github.io/blog/2020/12/30/clean-install-01/">macの再設定</a></h1>
-	<b><time>30.12.2020 22:52</time></b>
-	
-	<a href="https://ktsukamoto1985.github.io/blog/tags/mac">Mac</a>
-	
-	<div>
-		macをクリーンインストールしたので、やったことを記す。
-環境 macOS Big Sur 11.1
-Apple Storeからインストールした  Limechat  サイトからインストールした  Chrome Vivaldi Skype Spotify zoom Microsoft 365 Google Drive Slack Arduino QGIS Dropbox  サイトからzipをダウンロードした  Atom  Homebrew  Homebrew（まずはここから） go hugo zlib python mecab mecab-ipadic  Pythonは諦めた システム標準のPythonを使うことは具合が悪いので、Homebrew経由で3.9.1をインストール。その後、.zshrcの中身を以下のように書き換える。
-export LDFLAGS=&#34;-L/usr/local/opt/zlib/lib&#34; export CPPFLAGS=&#34;-I/usr/local/opt/zlib/include&#34; alias python=/usr/local/bin/python3 alias pip=/usr/local/bin/pip3.9 その後、sourceで読み込み直した後にpipでnumpy, scipy, matplotlib, seaborn, pandas, sklearn, jupyterlabをインストールする。蛇足ながら
-$ pip install numpy scipy matplotlib seaborn pandas sklearn jupyterlab mecab-python3 ひとまずここで動くようになった。pyenvはあまりPythonのバージョンを変化させる必要がないことからスルーする。poetryは導入したいかもしれない。
 		
 	</div>
 </article>
