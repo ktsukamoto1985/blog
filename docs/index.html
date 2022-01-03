@@ -40,6 +40,23 @@
 		
 		
 			<article>
+	<h1><a href="https://ktsukamoto1985.github.io/blog/2022/01/03/st.andrews_03/">J.S.ミルの文章を少しだけ訳してみる 03</a></h1>
+	<b><time>03.01.2022 17:35</time></b>
+	
+	<a href="https://ktsukamoto1985.github.io/blog/tags/j.s.mill">J.S.Mill</a>
+	
+	<div>
+		前回に引き続き。今回は前回の続きとなる一文を訳することに。
+ Much more might be said respecting classical instruction, and literary cultivation in general, as a part of liberal education. But it is time to speak of the uses of scientific instruction: or rather its indispensable necessity, for it is recommended by every consideration which pleads for any high order of intellectual education at all.
+The most obvious part of the value of scientific instruction, the mere information that it gives, speaks for itself.
+		
+			<a href="https://ktsukamoto1985.github.io/blog/2022/01/03/st.andrews_03/">Read more...</a>
+		
+	</div>
+</article>
+
+		
+			<article>
 	<h1><a href="https://ktsukamoto1985.github.io/blog/2022/01/02/st.andrews_02/">J.S.ミルの文章を少しだけ訳してみる 02</a></h1>
 	<b><time>02.01.2022 17:35</time></b>
 	
@@ -189,35 +206,6 @@ brew install gdal この結果、夥しい量の依存関係とともにgdalが�
 pip install GDAL==$(gdal-config --version | awk -F&#39;[.]&#39; &#39;{print $1&#34;.&#34;$2}&#39;) ここまで実施したところ、問題なく前回記事のgeotiff変換が行えることを確認した。
 ところで、GISで色々と点を打ってみると新たな発見があって面白い。
 城などプロットしてみる標高データを重ねてみると、安芸武田氏の佐東銀山城も熊谷氏の三入高松城も山上に築かれていることがわかる。対して香川氏の八木城は川沿いに見える。ストリートビューを見るときちんとこの辺りも小高い丘になっていることがわかるので、使用した数値標高モデルが5mではなく10mメッシュだったことや、色分けの段階が粗かったことなどが理由として考えられる。
-		
-	</div>
-</article>
-
-		
-			<article>
-	<h1><a href="https://ktsukamoto1985.github.io/blog/2020/12/31/qgis-dem/">QGISで基盤地図情報を表示する(1)</a></h1>
-	<b><time>31.12.2020 18:48</time></b>
-	
-	<a href="https://ktsukamoto1985.github.io/blog/tags/mac">Mac</a>
-	
-	<a href="https://ktsukamoto1985.github.io/blog/tags/python">python</a>
-	
-	<a href="https://ktsukamoto1985.github.io/blog/tags/geotiff">geotiff</a>
-	
-	<div>
-		多分何回かかかりそうなので。ひとまずは数値標高モデルから
-数値標高モデルのダウンロード 基盤地図情報のダウンロードページからダウンロードする。
-https://fgd.gsi.go.jp/download/menu.php
-geotiffに変換する やり方を調べたけれど、これが一番やりやすかった。
-Pythonを用いた基盤地図情報 数値標高データのgeotiff変換
-https://qiita.com/HidKamiya/items/66b1d98503301446460c
-コマンドとしてpython zdem2tif.pyのあとに続ける引数のファイル名を一括で生成したかったので、ちょっと頑張ってシェルスクリプトを書いた。
-ls | grep DEM10B | xargs echo -n &gt; filelist.txt 得られたファイルリストをそのまま貼り付けた。本当は一気に.shで書き上げてしまいたかったけど時間切れ。いつか考える。
-QGISに読み込ませる geotiffに変換したラスタデータを読み込ませて表示させてみた。
-ラスタデータを読み込ませたなんとなくグリッドが入っているように見えるが、これはラスタデータの切れ目を表している。おそらくデータごとに最大値と最小値でスケーリングさせているものと思われる。色別標高図を作る時は、これらを統合してしまった方が楽なので統合を行う。メニューの[ラスタ] &gt; [その他] &gt; [結合(gdal_merge)]で結合を行うことができる。ここができなかったせいでmacOSの再インストールを敢行することになった。
-ラスタデータを結合したここまできてようやく色別標高図を作成できる。レイヤのプロパティからレンダリングタイプを単バンド擬似カラー、カラーランプをSpectralに設定したものが以下の通り。
-色別標高図の作成国土数値情報のベクタデータを読み込ませて重ねてみた。
-色別標高図の作成色々付け足していけば、しばらく遊べそう。
 		
 	</div>
 </article>
