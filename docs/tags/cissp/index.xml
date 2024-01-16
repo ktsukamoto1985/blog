@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cissp on censored</title>
+    <link>https://ktsukamoto1985.github.io/blog/tags/cissp/</link>
+    <description>Recent content in cissp on censored</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 14 Jan 2024 20:34:23 +0900</lastBuildDate><atom:link href="https://ktsukamoto1985.github.io/blog/tags/cissp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CISSP合格していたので</title>
+      <link>https://ktsukamoto1985.github.io/blog/2024/01/14/cissp/</link>
+      <pubDate>Sun, 14 Jan 2024 20:34:23 +0900</pubDate>
+      
+      <guid>https://ktsukamoto1985.github.io/blog/2024/01/14/cissp/</guid>
+      <description>CISSPに合格したので、やったことを淡々と記載。
+この記事を書いている人間について  2023年3月に東京都立産業技術大学院大学を卒業した社会人 2024年春季の情報処理安全確保支援士試験に合格 JTCで開発用クラウドの管理などをしている TOEICは10年くらい前に受けたときに795だった  勉強に使ったリソース  Official Student Guide(日本語版) トレーニング受けるともらえるやつ。6th Editionなのでちょっと情報が古いのではないかと気になり、以下のお布施につながった。 CISSP公式問題集 結果的に最重要教材。 CISSP 勉強ノート CISSPを受けるみなさんはご存じの。そんなに頻繁に見てはないけど、何かあった時にテキストのあたりを付けるための索引として使うことが多かったかも。 Pete Zerger氏のYouTube Official Study Guideが6th Editionなので、カバーしきれていないところがないか不安で一通り確認。講義資料のスライドも無償で配布されておりありがたいが、あまりのボリュームにDLしただけ状態で終わった。最低限のmnemonicだけノートに書き写したけど、それだけでも十分役立った。 (ISC)2 CISSP Certified Information Systems Security Professional Official Study Guide (Sybex Study Guide) (English Edition) お布施として購入。Kindleでは正直読めたもんじゃないけど、パラパラ気になるワードだけ拾った。9th Editionなのが良い。 The Official (ISC)2 CISSP CBK Reference (English Edition) こちらもお布施として購入。リファレンスの章立てがドメインと異なるのが非常に学習をややこしくしている。これもKindleでは正直読めたもんじゃないけど、パラパラ気になるワードだけ拾った。  日本語のCBK公式ガイドブックは買っていない。
+その他参考にしたもの  CISSP合格したので勉強法など #Security - Qiita かうさんの記事。とても参考になった。 猫とCISSP 読み物として面白く読んだ。CISSP的な考えを得るには一番参考になったと思う。  どうやって勉強したか  トレーニングを受講したものの、受験する時間が取れず2年以上経過してからのスタート まずは日本語版のStudent Guideを再度通読 読み終わった段階で残り2か月、問題集を開始 間違えた問題については解説や誤答選択肢とその意味、解答に至るまでのプロセスを調べてノートにまとめる 必要に応じてNIST SP800シリーズをダウンロードして軽く目を通す 通勤中や夕食中はYouTubeを視聴して特に自分に足りないところを書き留め 1週間前くらいに問題集2周、模擬問題に進むもやることは同じ 仕事の都合上、２日に１回ペースでしか勉強できず 試験前日に滑り込みで模擬問題1周完了 直前で前述のかうさんが主催しているdiscordに潜入  当日  水とラムネとチョコレートを準備、実際には水とラムネをちょっと食べたくらい 休憩はだいたい75問ごとくらいを目安に2回 自信をもって回答できた問題は半分くらいしかなかったと思う だいたい5時間くらいで解き終わり、なんとか奇跡の合格を果たした次第  </description>
+    </item>
+    
+  </channel>
+</rss>
